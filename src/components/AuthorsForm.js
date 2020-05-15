@@ -11,7 +11,7 @@ function AuthorsForm(props) {
         label="Author's Name"
         value={props.author.name}
         onChange={props.onChange}
-        error={props.error.name}
+        error={props.error}
       />
       <button className="btn btn-primary">Save Author</button>
     </form>

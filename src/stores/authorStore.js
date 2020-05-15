@@ -35,6 +35,18 @@ Dispatcher.register((action) => {
       _authors = action.authors;
       store.emitChange();
       break;
+
+    case actionTypes.CREATE_AUTHOR:
+      _authors.push(action.author);
+      store.emitChange();
+      break;
+
+    case actionTypes.UPDATE_AUTHOR:
+      _authors = _authors.map((author) =>
+        author.id === action.author.id ? action.author : author
+      );
+      store.emitChange();
+      break;
     default:
     //nothing
   }

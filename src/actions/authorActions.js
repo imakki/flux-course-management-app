@@ -10,3 +10,14 @@ export function loadAuthors() {
     });
   });
 }
+
+export function saveAuthor(author) {
+  return authorApi.saveAuthor().then((savedAuthor) => {
+    dispatcher.dispatch({
+      actionType: author.id
+        ? actionTypes.UPDATE_AUTHOR
+        : actionTypes.CREATE_AUTHOR,
+      author: savedAuthor,
+    });
+  });
+}

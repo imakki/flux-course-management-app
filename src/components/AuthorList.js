@@ -30,7 +30,7 @@ function AuthorList(props) {
 }
 
 AuthorList.propTypes = {
-  deleteAuthor: PropTypes.func.isRequired,
+  //deleteAuthor: PropTypes.func.isRequired,
   authors: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,

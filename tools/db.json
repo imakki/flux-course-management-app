@@ -1,5 +1,6 @@
 {
-  "courses": [{
+  "courses": [
+    {
       "id": 4,
       "title": "Building a JavaScript Development Environment",
       "slug": "javascript-development-environment",
@@ -35,7 +36,8 @@
       "category": "Career"
     }
   ],
-  "authors": [{
+  "authors": [
+    {
       "id": 1,
       "name": "Cory House"
     },
@@ -48,8 +50,9 @@
       "name": "Dan Wahlin"
     },
     {
-      "id": 4,
-      "name": "ankit"
+      "name": "fafasf",
+      "createdAt": 1589566631530,
+      "id": 4
     }
   ]
 }
