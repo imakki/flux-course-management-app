@@ -6,7 +6,7 @@ function NotFoundSlug() {
     <div>
       <h2>Slug not found</h2>
       <p>
-        <Link to="/">Back to Home</Link>
+        <Link to="/courses">Back to Courses Page</Link>
       </p>
     </div>
   );

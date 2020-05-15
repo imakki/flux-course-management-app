@@ -7,16 +7,27 @@ function CourseList(props) {
     <table className="table">
       <thead>
         <tr>
-          <th>&nbsp;</th>
           <th>Title</th>
           <th>Author ID</th>
+          <th>Author</th>
           <th>Category</th>
+          <th>{"\u00A0"}</th>
         </tr>
       </thead>
       <tbody>
         {props.courses.map((course) => {
           return (
             <tr key={course.id}>
+              <td>
+                <Link to={"/course/" + course.slug}>{course.title}</Link>
+              </td>
+              <td>{course.authorId}</td>
+              <td>
+                {props.authors.map((author) =>
+                  author.id === course.authorId ? author.name : ""
+                )}
+              </td>
+              <td>{course.category}</td>
               <td>
                 <button
                   className="btn btn-outline-danger"
@@ -27,11 +38,6 @@ function CourseList(props) {
                   Delete
                 </button>
               </td>
-              <td>
-                <Link to={"/course/" + course.slug}>{course.title}</Link>
-              </td>
-              <td>{course.authorId}</td>
-              <td>{course.category}</td>
             </tr>
           );
         })}
