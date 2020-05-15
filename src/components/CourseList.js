@@ -16,17 +16,14 @@ function CourseList(props) {
       </thead>
       <tbody>
         {props.courses.map((course) => {
+          const author = props.authors.find((a) => a.id === course.authorId);
           return (
             <tr key={course.id}>
               <td>
                 <Link to={"/course/" + course.slug}>{course.title}</Link>
               </td>
               <td>{course.authorId}</td>
-              <td>
-                {props.authors.map((author) =>
-                  author.id === course.authorId ? author.name : ""
-                )}
-              </td>
+              <td>{author ? author.name : ""}</td>
               <td>{course.category}</td>
               <td>
                 <button
